@@ -15,8 +15,8 @@ for string in strings:
                 pass
         if j:
             try:
-                dig1 = int(string[len(string)-i-1])
-                n+=dig1
+                dig2 = int(string[len(string)-i-1])
+                n+=dig2
                 j=False
             except ValueError:
                 pass
