@@ -2,6 +2,7 @@ with open("1a_datos.txt", "r") as datos:
     strings = datos.readlines()
 nums = []
 for string in strings:
+    j = True
     k = True
     n = 0
     for i in range (0, len(string)):
@@ -12,13 +13,11 @@ for string in strings:
                 k=False
             except ValueError:
                 pass
-    k = True
-    for i in range (0, len(string)):
-        if k:
+        if j:
             try:
                 dig2 = int(string[len(string)-i-1])
                 n+=dig2
-                k=False
+                j=False
             except ValueError:
                 pass
     nums.append(n)
