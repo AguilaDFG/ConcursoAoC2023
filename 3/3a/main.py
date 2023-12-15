@@ -6,6 +6,8 @@ for fila in filasAux:
 filas.append(len(filasAux[0])*".")
 for fila in filas:
     filas[filas.index(fila)] = "." + fila
+for fila in filas:
+    filas[filas.index(fila)] = fila.replace("\n", ".")
 
 res = 0
 n=0
@@ -13,7 +15,7 @@ symbols = ["@", "#", "$", "%", "&", "+", "-", "*", "/", "="]
 for fila in filas:
     i=0
     for char in fila:
-        if char != "." and char != "\n" and not char in symbols:
+        if char != "."  and not char in symbols:
             n*=10
             n += int(char)
         else:
